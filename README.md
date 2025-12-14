@@ -23,19 +23,21 @@ SS451A datasheet
 Example  
 ![ATtiny85 SS451A example](docs/images/ProtoTypeExample.png)
 
-Pinout  
+Pinout
+``` 
 Pin   Desc          To  
 1     RESET         Not in use  
-2     \[3\] A3        Not in use  
-3     \[4\] A2        Not in use  
+2     [3] A3        Not in use  
+3     [4] A2        Not in use  
 4     GND           I2C GND & SS451A GND       Pin 2 (Center Pin)  
-5     \[0\] PWM       I2C SDA  
-6     \[1\] PWM       SS451A Interrupt Pin 3 (Right)  
-7     \[2\] A1        I2C SCL  
+5     [0] PWM       I2C SDA  
+6     [1] PWM       SS451A Interrupt Pin 3 (Right)  
+7     [2] A1        I2C SCL  
 8      VCC          I2C VCC & SS451A VCC       Pin 1 (Left)
+```
 
 ATTINY85 Anemometer Code
-```
+```c
 /*
  *======================================================================================================================
  * WindSpeedAtTiny85 - 
@@ -121,7 +123,7 @@ void loop() {
 ```
 
 Example Code: ReadWindSpeed
-```
+```c
 /*
  *======================================================================================================================
  * ReadWindSpeedFeather - 
