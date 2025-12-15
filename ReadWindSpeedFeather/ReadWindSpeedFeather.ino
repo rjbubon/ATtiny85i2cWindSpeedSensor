@@ -41,22 +41,10 @@ bool I2C_Device_Exist(byte address) {
   //  3:received NACK on transmit of data
   //  4:other error 
 
-  // Partice Library Return values
-  // SEE https://docs.particle.io/cards/firmware/wire-i2c/endtransmission/
-  // 0: success
-  // 1: busy timeout upon entering endTransmission()
-  // 2: START bit generation timeout
-  // 3: end of address transmission timeout
-  // 4: data byte transfer timeout
-  // 5: data byte transfer succeeded, busy timeout immediately after
-  // 6: timeout waiting for peripheral to clear stop bit
-
   if (error == 0) {
     return (true);
   }
   else {
-    // sprintf (msgbuf, "I2CERR: %d", error);
-    // Output (msgbuf);
     return (false);
   }
 }
